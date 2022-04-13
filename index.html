@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+        
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <title>Image Classification WebApp</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+		
+		<style>
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+                .button-3 {
+                  appearance: none;
+                  background-color: #2ea44f;
+                  border: 1px solid rgba(27, 31, 35, .15);
+                  border-radius: 6px;
+                  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+                  box-sizing: border-box;
+                  color: #fff;
+                  cursor: pointer;
+                  display: inline-block;
+                  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                  font-size: 14px;
+                  font-weight: 600;
+                  line-height: 20px;
+                  padding: 6px 16px;
+                  position: relative;
+                  text-align: center;
+                  text-decoration: none;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                  vertical-align: middle;
+                  white-space: nowrap;
+                }
+                
+                .button-3:focus:not(:focus-visible):not(.focus-visible) {
+                  box-shadow: none;
+                  outline: none;
+                }
+                
+                .button-3:hover {
+                  background-color: #2c974b;
+                }
+                
+                .button-3:focus {
+                  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+                  outline: none;
+                }
+                
+                .button-3:disabled {
+                  background-color: #94d3a2;
+                  border-color: rgba(27, 31, 35, .1);
+                  color: rgba(255, 255, 255, .8);
+                  cursor: default;
+                }
+                
+                .button-3:active {
+                  background-color: #298e46;
+                  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+                }
+			input[type=file]::file-form {
+                      border: 2px solid #6c5ce7;
+                      padding: .2em .4em;
+                      border-radius: .2em;
+                      background-color: #a29bfe;
+                      transition: 1s;
+                    }
+                    
+                    input[type=file]::file-form {
+                      background-color: #81ecec;
+                      border: 2px solid #00cec9;
+                    }
+			
+		</style>
+
+
+    </head>
+	
+    <body>
+	<div class="bg-img">
+	<div class="content">
+        <div class = "index-main">
+
+        <div style = "width : 100%; padding-top : 5%;">
+            <div class = "header-content">
+                 <h1 style = "text-align: center;color: white"><span class="header-content-text">Human Activity Recognition Model</span></h1>
+            </div>
+        </div>
+
+        <div class="upload-section">
+
+            <div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="file-form-input" type="file" , name = "file"/>
+                    <button class="button-3">Predict</button> 
+                </form>
+            </div>
+            
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>
+        </div>
+
+        
+	     </div>  
+	</div>			 
+	</div>	 
+    </body>
+</html>
