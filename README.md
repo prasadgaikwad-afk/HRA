@@ -29,7 +29,7 @@ UCF101 dataset
 
 ## Achitecture
 
-![](architecture.png)
+![](a.png)
 
 
 ## System used
