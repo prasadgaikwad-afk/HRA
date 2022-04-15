@@ -26,6 +26,12 @@ keras 2.6.0
 All the frames extracted from videos were re-sized to 224 × 224 shape to feed the to the model.
 ## Data Set
 UCF101 dataset
+
+## Achitecture
+
+![](architecture.png)
+
+
 ## System used
 
 Intel CORE i5-10300H CPU computer with 8GB 
