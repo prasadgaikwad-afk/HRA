@@ -34,7 +34,7 @@ UCF101 dataset
 
 ## Accuracy
 
-![](a.png)
+![](CNN_Model.png)
 
 
 ## System used
