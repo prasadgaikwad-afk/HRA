@@ -32,6 +32,11 @@ UCF101 dataset
 ![](a.png)
 
 
+## Accuracy
+
+![](a.png)
+
+
 ## System used
 
 Intel CORE i5-10300H CPU computer with 8GB 
