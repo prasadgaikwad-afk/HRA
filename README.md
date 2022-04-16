@@ -24,10 +24,19 @@ keras 2.6.0
 
 
 All the frames extracted from videos were re-sized to 224 × 224 shape to feed the to the model.
+
 ## Data Set
+
 UCF101 dataset
 
+UCF101 is an action recognition data set of realistic action videos, collected from YouTube, having 101 action categories. This data set is an extension of UCF50 data set which has 50 action categories.
+
+
 ## Achitecture
+
+A convolutional neural 
+network extracts the features of the video while an LSTM neural network classifies 
+the video into a certain category.
 
 ![](a.png)
 
